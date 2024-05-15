@@ -1,0 +1,31 @@
+CRIAÇÃO DE REDE NAT VIA DOCKER
+Abra o terminal e execute o seguinte comando para criar uma nova rede no Docker:
+
+$ docker network create minha-rede
+Execução de Dois Containers na Rede:
+Agora, vamos executar dois containers e conectá-los à rede que acabamos de criar. Usaremos imagens do Docker Hub, como o Ubuntu, para este exemplo.
+
+Execute o primeiro container e conecte-o à rede:
+
+$ docker run -dit --name container1 --network minha-rede ubuntu
+Faça o mesmo para o segundo container:
+
+$ docker run -dit --name container2 --network minha-rede ubuntu
+Comunicação entre os Containers:
+Entre no primeiro container:
+
+$ docker exec -it container1 bash
+E, dentro do container, você pode usar ferramentas como ping para verificar a conexão com o segundo container. Por exemplo:
+
+$ ping container2
+Verificando a Conexão:
+Você deve ver respostas do ping, indicando que a comunicação entre os dois containers está funcionando.
+
+Encerramento e Limpeza:
+Quando terminar, você pode sair dos containers e pará-los:
+
+$ docker stop container1 container2
+E, se desejar, remova os containers e a rede:
+
+$ docker rm container1 container2
+$ docker network rm minha-rede
