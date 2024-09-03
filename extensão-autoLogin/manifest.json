@@ -1,0 +1,24 @@
+{
+  "name": "Auto Login grafana",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Uma extensão criada por Duda Byte",
+  "content_scripts": [
+    {
+      "js": ["contentscript.js"],
+      "matches": ["link do login"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
