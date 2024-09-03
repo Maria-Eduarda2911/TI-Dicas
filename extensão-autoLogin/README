@@ -1,0 +1,16 @@
+📌 Como Configurar:
+
+🔸 Personalize o Script script.js:
+Atualize as Credenciais e URLs: No arquivo script.js, ajuste o código para inserir suas credenciais e o URL da página para a qual deseja redirecionar. Isso garante que a extensão faça login e redirecione corretamente.
+
+🔸Atualize o Manifesto da Extensão manifest.js:
+Ajuste o Link: No arquivo manifest.js, verifique e modifique o link se necessário para garantir que a extensão funcione com a URL correta.
+
+🔸Configure o Script de Inicialização:
+Edite o Arquivo Open-chrome.bat: Ajuste o link no arquivo .bat para definir o URL que você deseja abrir automaticamente.
+
+🔸Configuração de Inicialização Automática:
+Pressione Windows + R, digite shell:startup e pressione Enter.
+Coloque o arquivo .bat na pasta de inicialização. Isso fará com que o navegador abra automaticamente com o link configurado sempre que o Windows iniciar.
+
+link do post no meu linkedin com video mostrando como colocar extensão no google chrome: https://www.linkedin.com/feed/update/urn:li:activity:7236807913485287424/
