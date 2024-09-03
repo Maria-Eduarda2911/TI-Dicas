@@ -11,9 +11,9 @@
     if (usernameField && passwordField && loginButton) {
       // Preenche os campos
       usernameField.focus();
-      usernameField.value = "user";
+      usernameField.value = "usuário";
       passwordField.focus();
-      passwordField.value = "passwd";
+      passwordField.value = "senha";
 
       // Força a atualização dos campos
       usernameField.dispatchEvent(new Event('input', { bubbles: true }));
@@ -38,7 +38,7 @@
               console.log('Ainda na página de login, aguardando mais um pouco.');
             } else {
               // Redireciona para o dashboard se não estiver na página de login
-              window.location.href = 'link do dash'; // Substitua pela URL do seu dashboard
+              window.location.href = 'https://www.exemplo.com/*'; // Substitua pela URL do seu dashboard
               console.log('Redirecionando para o Dashboard');
             }
           }, 5000); // Ajuste o atraso conforme necessário
